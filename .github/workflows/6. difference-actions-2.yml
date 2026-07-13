@@ -1,0 +1,8 @@
+name: Without using actions
+on: push
+jobs:
+    read-current-file:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Read current files
+              run: ls -ali

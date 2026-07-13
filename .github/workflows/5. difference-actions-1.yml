@@ -1,0 +1,11 @@
+name: What is the impact using actions
+on: push
+jobs:
+    read-current-file:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get my code
+              uses: actions/checkout@v7
+            
+            - name: Read current files
+              run: ls -ali
