@@ -1,5 +1,6 @@
 name: Schedule
-on: schedule:
+on: 
+    schedule:
     - cron: '0 12 * * *'
 jobs:
     print-date:
