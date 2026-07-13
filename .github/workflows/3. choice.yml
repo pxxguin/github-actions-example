@@ -1,0 +1,15 @@
+name: Choice useage
+on:
+    workflow_dispatch:
+        inputs:
+            user-choice:
+                type: choice
+                options:
+                    - info
+                    - warn
+                    - error
+jobs:
+    print-choice:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo ${{inputs.user-choice}}
