@@ -1,0 +1,15 @@
+name: just see what is the result of those environment
+on: workflow_dispatch
+jobs:
+    see-required-environment:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Print Github context
+            run: |
+              echo "${{ github.run_id }}"
+              echo "${{ github.head_ref }}"
+              echo "${{ github.workspace }}"
+              echo "${{ github.repository }}"
+              echo "${{ github.repository_owner }}"
+              echo "${{ github.event }}"
+              echo "${{github.ref}}"
