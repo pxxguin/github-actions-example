@@ -1,7 +1,7 @@
 name: Without using actions
 on: push
 jobs:
-    read-current-file:
+    without-using-actions:
         runs-on: ubuntu-latest
         steps:
             - name: Read current files

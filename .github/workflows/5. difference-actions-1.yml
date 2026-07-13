@@ -1,7 +1,7 @@
 name: What is the impact using actions
 on: push
 jobs:
-    read-current-file:
+    with-using-actions:
         runs-on: ubuntu-latest
         steps:
             - name: Get my code
