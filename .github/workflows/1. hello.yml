@@ -1,5 +1,5 @@
 name: Hello # 워크플로우명
-on: push # 이벤트
+on: workflow_dispatch # 이벤트
 jobs: # 잡(워크플로우 실행 단위)
   hello-world: # 잡 ID
     runs-on: ubuntu-latest # 잡의 실행환경(러너)

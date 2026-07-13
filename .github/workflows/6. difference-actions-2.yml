@@ -1,5 +1,5 @@
 name: Without using actions
-on: push
+on: workflow_dispatch
 jobs:
     without-using-actions:
         runs-on: ubuntu-latest

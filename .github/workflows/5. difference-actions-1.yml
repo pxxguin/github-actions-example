@@ -1,5 +1,5 @@
 name: What is the impact using actions
-on: push
+on: workflow_dispatch
 jobs:
     with-using-actions:
         runs-on: ubuntu-latest
