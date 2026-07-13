@@ -1,8 +1,11 @@
-name: Hello
-on: push
-jobs:
-  hello-world:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Hello, World!"
-      - uses: actions/checkout@v4
+name: Hello # 워크플로우명
+on: push # 이벤트
+jobs: # 잡(워크플로우 실행 단위)
+  hello-world: # 잡 ID
+    runs-on: ubuntu-latest # 잡의 실행환경(러너)
+    steps: # 워크플로우의 최소 처리 단위
+      - run: echo "Hello, World!" # 셸 명령
+      - run: | # 여러 명령어를 함께 쓴다면
+          git --version
+          docker --version
+      - uses: actions/checkout@v4 # 액션
