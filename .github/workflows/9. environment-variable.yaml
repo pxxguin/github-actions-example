@@ -1,0 +1,13 @@
+name: Environment Variables
+on: workflow_dispatch
+jobs:
+    run:
+        runs-on: ubuntu-latest
+        env:
+            BRANCH: main
+        steps:
+            - run: echo "${BRANCH}"
+            - uses: actions/checkout@v7
+              with:
+                ref: ${{ env.BRANCH }}
+            - run: echo "${{ env.BRANCH }}"
