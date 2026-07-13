@@ -8,4 +8,4 @@ jobs: # 잡(워크플로우 실행 단위)
       - run: | # 여러 명령어를 함께 쓴다면
           git --version
           docker --version
-      - uses: actions/checkout@v4 # 액션
+      - uses: actions/checkout@v7 # 액션
