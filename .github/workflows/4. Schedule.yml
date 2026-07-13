@@ -1,9 +1,8 @@
 name: Schedule
-on:
-    schedule:
-        - cron: '*/1 * * * *'
+on: schedule:
+    - cron: '0 12 * * *'
 jobs:
-    print-time:
-        runs-on: ubuntu-latest
+    print-date:
+        runs-on: ubuntu:latest
         steps:
-            - run: date
+            - run: echo date
