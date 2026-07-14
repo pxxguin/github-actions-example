@@ -1,5 +1,5 @@
 name: Parallel jobs
-on: push
+on: workflow_dispatch
 jobs:
     first:
         runs-on: ubuntu-latest
