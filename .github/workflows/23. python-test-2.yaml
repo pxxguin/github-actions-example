@@ -2,7 +2,7 @@ name: Python test 2
 on:
     push:
         paths: ['src/**/*.py']
-        branches: ['develop']
+        branches: ['main']
 jobs:
     test-python:
         runs-on: ubuntu-latest
