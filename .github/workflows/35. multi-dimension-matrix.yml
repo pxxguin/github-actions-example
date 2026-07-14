@@ -1,0 +1,16 @@
+name: Multi dimension matirx
+on: push
+jobs:
+    print:
+        strategy:
+            matrix:
+                os: [ubuntu-latest, macos-latest]
+                version: [18, 20]
+        runs-on: ${{matrix.os}}
+        steps:
+            - name: Use node
+              uses: actions:/setup-node@v6
+              with:
+                version: ${{matrix.version}}
+            - name: Excute the version of the node
+              run: echo "${RUNNER_OS}" && node-version
