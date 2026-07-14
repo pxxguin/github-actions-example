@@ -11,7 +11,7 @@ jobs:
         steps:
             - run: echo "This is fucking second steps."
     test-3:
-        runs-on: ubuntu-latets
+        runs-on: ubuntu-latest
         needs: [test-2]
         steps:
             - run: echo "HaHa, This is final steps!!"
