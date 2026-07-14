@@ -14,4 +14,4 @@ jobs:
             - name: Install pip package
               run: pip install -r requirements.txt --no-cache-dir
             - name: Test the main.py
-              run: pytest src/main.py
+              run: pytest src/tests/test_main.py
