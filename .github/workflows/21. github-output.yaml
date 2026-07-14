@@ -1,5 +1,5 @@
 run-name: Run by ${{github.actor}}
-on: push
+on: workflow_dispatch
 jobs:
     check-step-data-transfer:
         runs-on: ubuntu-latest

@@ -1,0 +1,17 @@
+name: Simple python test
+on: push
+jobs:
+    excute-test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Excute actions/checkout@v7
+              uses: actions/checkout@v7
+            - name: Excute actions/setup-python@v6
+              uses: actions/setup-python@v6
+              with:
+                python-version: ./requirements.txt
+                cache: pip
+            - name: Install pip package
+              run: pip install -r requirements.txt --no-cache-dir
+            - name: Test the main.py
+              run: pytest src/main.py
