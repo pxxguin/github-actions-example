@@ -1,0 +1,11 @@
+run-name: Run by ${{github.actor}}
+on: push
+jobs:
+    check-step-data-transfer:
+        runs-on: ubuntu-latest
+        steps:
+            - id: source
+              run: echo "NAME=pxxguin" >> "${GITHUB_OUTPUT}"
+            - env:
+                NAME: ${{steps.source.outputs.name}}
+              run: echo "${NAME}"
