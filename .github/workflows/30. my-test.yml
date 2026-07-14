@@ -1,5 +1,5 @@
 name: This is markdown test
-on: push
+on: workflow_dispatch
 jobs:
     logs:
         runs-on: ubuntu-latest
