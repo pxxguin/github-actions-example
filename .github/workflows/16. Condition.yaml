@@ -4,5 +4,7 @@ jobs:
     skip-or-run:
         runs-on: ubuntu-latest
         steps:
-            - run: echo "Hello"
+            - run: |
+                echo "Hello, World!"
+                echo "${{github.run_id}}"
               if: ${{ contains(github.run_attempt, '1')}}
