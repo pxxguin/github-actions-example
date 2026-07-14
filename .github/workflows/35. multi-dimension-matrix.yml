@@ -9,7 +9,7 @@ jobs:
         runs-on: ${{matrix.os}}
         steps:
             - name: Use node
-              uses: actions:/setup-node@v6
+              uses: actions/setup-node@v6
               with:
                 version: ${{matrix.version}}
             - name: Excute the version of the node
