@@ -1,5 +1,5 @@
 name: Multi dimension matirx
-on: push
+on: workflow_dispatch
 jobs:
     print:
         strategy:

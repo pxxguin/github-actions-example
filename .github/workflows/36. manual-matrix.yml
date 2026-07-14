@@ -1,0 +1,19 @@
+name: Manual Matrix
+on: push
+jobs:
+    prints:
+        strategy:
+            matrix:
+                include:
+                    - os: ubuntu-latest
+                      version: 18
+                    - os: macos-latest
+                      version: 20
+        runs-on: ${{matrix.os}}
+        steps:
+            - name: Reference actions/setup-node@v6
+              uses: actions/setup-node@v6
+              with:
+                node-version: ${{matrix.version}}
+            - name: Show status
+              run: echo "${RUNNER_OS}" && node --version
