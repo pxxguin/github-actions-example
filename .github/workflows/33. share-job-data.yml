@@ -1,0 +1,17 @@
+name: Share job data
+on: push
+jobs:
+    first:
+        runs-on: ubuntu-latest
+        steps:
+            - id: generate
+              run: echo "actor=${{github.actor}}" >> "${GITHUB_OUTPUT}"
+        outputs:
+            actor: ${{steps.generate.outputs.actor}}
+    second:
+        runs-on: ubuntu-latest
+        needs: [first]
+        steps:
+            - env:
+                ACTOR: needs.first.outputs.actor
+              run: echo "${ACTOR}"
