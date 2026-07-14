@@ -1,0 +1,11 @@
+name: Status check functions
+on: push
+jobs:
+    test-check-functions:
+        runs-on: ubuntu-latest
+        steps:
+            - run: exit 1
+            - run: echo "Is this work failure?"
+              if: ${{failure()}}
+            - run: echo "Is this work success?"
+              if: ${{success()}}
