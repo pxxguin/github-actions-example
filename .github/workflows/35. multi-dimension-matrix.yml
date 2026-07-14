@@ -13,4 +13,4 @@ jobs:
               with:
                 node-version: ${{matrix.version}}
             - name: Excute the version of the node
-              run: echo "${RUNNER_OS}" && node-version
+              run: echo "${RUNNER_OS}" && node --version
