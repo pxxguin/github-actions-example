@@ -1,5 +1,5 @@
 name: Log grouping
-on: push
+on: workflow_dispatch
 jobs:
     logs:
         runs-on: ubuntu-latest
