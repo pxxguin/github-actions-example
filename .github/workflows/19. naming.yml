@@ -1,5 +1,5 @@
 name: Naming
-on: push
+on: workflow_dispatch
 jobs:
     naming-jobs:
         runs-on: ubuntu-latest
