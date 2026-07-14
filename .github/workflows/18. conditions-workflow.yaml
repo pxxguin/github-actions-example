@@ -1,5 +1,5 @@
 name: Condtions workflow
-on: push
+on: workflow_dispatch
 jobs:
     check-conditions-workflow:
         if: ${{github.actor == 'pxxguin'}}

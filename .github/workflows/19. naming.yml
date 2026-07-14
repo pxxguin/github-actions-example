@@ -1,0 +1,10 @@
+name: Naming
+on: push
+jobs:
+    naming-jobs:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Echo current github actor
+              run: echo "${{github.actor}}"
+            - name: Echo current repository
+              run: echo "${{github.action_repository}}"
