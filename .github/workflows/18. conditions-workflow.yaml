@@ -1,0 +1,8 @@
+name: Condtions workflow
+on: push
+jobs:
+    check-conditions-workflow:
+        if: ${{github.actor == 'pxxguin'}}
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Welcome, ${{github.actor}}"
