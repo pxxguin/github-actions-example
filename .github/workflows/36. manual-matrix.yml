@@ -1,5 +1,5 @@
 name: Manual Matrix
-on: push
+on: workflow_dispatch
 jobs:
     prints:
         strategy:
