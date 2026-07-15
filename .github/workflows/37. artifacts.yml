@@ -16,6 +16,6 @@ jobs:
         steps:
             - uses: actions/download-artifact@v8
               with:
-                name: downloaded
+                name: uploaded
                 path: downloaded
             - run: cat downloaded/date.txt
